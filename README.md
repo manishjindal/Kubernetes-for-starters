@@ -1,12 +1,12 @@
 Table of contents
 =================
 
-  * [Kubernetes Concepts](# Kubernetes Concepts)
-  	* [Pod](##Pod)
-  	* [Replica Controller](## Replica Controller)
-  	* [Deployment](##Deployment)
-    * [Service](##Service)
-    * [Summary](##Summary)
+  * [Kubernetes Concepts](#Kubernetes-Concepts)
+  	* [Pod](#Pod)
+  	* [Replica Controller](#replica-controller)
+  	* [Deployment](#Deployment)
+    * [Service](#Service)
+    * [Summary](#summary)
   * [Getting Started with Examples](#Getting Started)
     * [Multiple files](## Deploy first static website inside minikube)
     * [Combo](#combo)
