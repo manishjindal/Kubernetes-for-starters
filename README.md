@@ -14,6 +14,13 @@ Table of contents
 
 # Kubernetes Concepts
 
+## Master
+
+
+## Node
+
+<img src="https://github.com/manishjindal/Kubernetes/blob/master/images/node-pod-container.png" width="500">
+
 ## Pod
 - A Pod is the basic building block of Kubernetes–the smallest and simplest unit in the Kubernetes object model that you create or deploy.
 - Like in Docker container is the smallest unit, in k8s Pod is the smallest unit.
