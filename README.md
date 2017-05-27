@@ -14,7 +14,7 @@ Table of contents
     * [Deploy first static website inside minikube](#deploy-first-static-website-inside-minikube)
   	* [Expose your application to outside world](#expose-your-application-to-outside-world)
   	* [Imperative vs Declarative Approach for creating](#imperative-vs-declarative-approach-for-creating)
-  	
+
 # Kubernetes Concepts
 
 ## Master
@@ -123,9 +123,9 @@ kubectl describe service static-site-svc
 minikube start
 ```
 
-## Imperative vs Declarative Approach for creating, updating - pods, deployment, replica-controller, service
+## Imperative vs Declarative Approach 
 
-- There are two ways for performing all these either CLI or you can define in yaml/json file.
+- There are two ways for creating, updating - pods, deployment, replica-controller, service, either CLI or you can define in yaml/json file.
 - For More info check 
 	* [Pod](https://github.com/manishjindal/Kubernetes/tree/master/Pod)
 	* [Deployment](https://github.com/manishjindal/Kubernetes/tree/master/Deployment)
@@ -137,7 +137,7 @@ minikube start
 apiVersion: v1
 Kind: Service, Pod, Deployment, ReplicationController
 metadata:
-	name: <name-of-the-service
+	name: <name-of-the-service>
 spec:
 
 ```
