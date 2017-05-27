@@ -13,7 +13,7 @@ Table of contents
     * [SetUp](#setup)
     * [Deploy first static website inside minikube](#deploy-first-static-website-inside-minikube)
   	* [Expose your application to outside world](#expose-your-application-to-outside-world)
-  	* [Imperative vs Declarative Approach for creating](#imperative-vs-declarative-approach-for-creating)
+  	* [Imperative vs Declarative Approach](#imperative-vs-declarative-approach)
 
 # Kubernetes Concepts
 
