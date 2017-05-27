@@ -15,9 +15,21 @@ Table of contents
 # Kubernetes Concepts
 
 ## Master
+- The Master is responsible for managing the cluster. The master coordinates all activities in your cluster, such as scheduling applications, maintaining applications' desired state, scaling applications, and rolling out new updates.
+- master is a collection of three processes that run on a single node in your cluster.
+	* kube-apiserver.
+	* kube-controller-manager
+	* kube-scheduler.
 
 
 ## Node
+
+- A node is a VM or a physical computer that serves as a worker machine in a Kubernetes cluster. 
+Each node has a Kubelet, which is an agent for managing the node and communicating with the Kubernetes master.
+
+- Each individual node runs two processes:
+	* kubelet : which communicates with the master.
+	* kube-proxy : a network proxy which reflects kubernetes networking service on each node.
 
 <img src="https://github.com/manishjindal/Kubernetes/blob/master/images/node-pod-container.png" width="500">
 
