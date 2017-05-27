@@ -13,7 +13,8 @@ Table of contents
     * [SetUp](#setup)
     * [Deploy first static website inside minikube](#deploy-first-static-website-inside-minikube)
   	* [Expose your application to outside world](#expose-your-application-to-outside-world)
-
+  	* [Imperative vs Declarative Approach for creating](#imperative-vs-declarative-approach-for-creating)
+  	
 # Kubernetes Concepts
 
 ## Master
@@ -38,9 +39,9 @@ Each node has a Kubelet, which is an agent for managing the node and communicati
 
 ## Pod
 - A Pod is the basic building block of Kubernetes–the smallest and simplest unit in the Kubernetes object model that you create or deploy.
-- Like in Docker container is the smallest unit, in k8s Pod is the smallest unit.
+- Like in Docker, container is the smallest unit, in k8s Pod is the smallest unit.
 - Pod is a wrapper around container in k8s.
-- A pod can be single container or multi-container.
+- You can run single container or multi-container inside a Pod
 - Example: if you have static web-app running inside a container in docker environment, in k8s that single container will run inside Pod.
 - Let's take a case where your application is made of multiple container ( client, server ) client in one container and server in different container than these two container can run inside your Pod and can communicate with each other.
 
@@ -122,7 +123,26 @@ kubectl describe service static-site-svc
 minikube start
 ```
 
+## Imperative vs Declarative Approach for creating, updating - pods, deployment, replica-controller, service
 
+- There are two ways for performing all these either CLI or you can define in yaml/json file.
+- For More info check 
+	* [Pod](https://github.com/manishjindal/Kubernetes/tree/master/Pod)
+	* [Deployment](https://github.com/manishjindal/Kubernetes/tree/master/Deployment)
+	* [Replica Controller](https://github.com/manishjindal/Kubernetes/tree/master/ReplicaController)
+	* [Service](https://github.com/manishjindal/Kubernetes/tree/master/Service)
+- Basic structure of yaml file
+
+```
+apiVersion: v1
+Kind: Service, Pod, Deployment, ReplicationController
+metadata:
+	name: <name-of-the-service
+spec:
+
+```
+
+		
 ## Deploy first static website inside minikube
 
 
