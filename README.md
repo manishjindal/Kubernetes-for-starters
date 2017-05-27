@@ -25,6 +25,7 @@ Table of contents
 	* kube-scheduler.
 
 
+<img src="https://github.com/manishjindal/Kubernetes/blob/master/images/master-slave-arch.png" width="500">
 
 ## Node
 
