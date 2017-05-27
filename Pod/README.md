@@ -64,4 +64,4 @@ kubectl apply -f <updated-pod-json/yaml-file> --record
 ./kubectl delete pod <pod-name>
 ```
 
-### The beauty of declarative  approach is that same commands are used for everything only content inside the file gets changed!
+### The beauty of declarative  approach is that same commands are used for everything (Pod, Replica Controller, Deployment, Service) only content inside the file gets changed!
