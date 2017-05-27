@@ -1,4 +1,21 @@
-# Pod
+Table of contents
+=================
+
+  * [Kubernetes Concepts](# Kubernetes Concepts)
+  	* [Pod](##Pod)
+  	* [Replica Controller](## Replica Controller)
+  	* [Deployment](##Deployment)
+    * [Service](##Service)
+    * [Summary](##Summary)
+  * [Getting Started with Examples](#Getting Started)
+    * [Multiple files](## Deploy first static website inside minikube)
+    * [Combo](#combo)
+  	* [Tests](#tests)
+  	* [Dependency](#dependency)
+
+# Kubernetes Concepts
+
+## Pod
 - A Pod is the basic building block of Kubernetes–the smallest and simplest unit in the Kubernetes object model that you create or deploy.
 - Like in Docker container is the smallest unit, in k8s Pod is the smallest unit.
 - Pod is a wrapper around container in k8s.
@@ -11,7 +28,8 @@
 kubectl create -f pod.yml
 ```
 
-# Replica Controller (rc,rcs)
+## Replica Controller 
+- Also knows as rc/rcs
 - A ReplicationController ensures that a specified number of pod “replicas” are running at any one time.
 - In the example here replicaController.yml, We tell rc what is the Pod label and how many Pods we want with that label.
 - If there are sufficient Pods present that it will not create any Pod but if the desired number of Pods are not available than it will create more Pods.
@@ -22,7 +40,7 @@ kubectl create -f replicaController.yml
 ```
 
 
-# Deployment
+## Deployment
 
 - A Deployment provides declarative updates for Pods and ReplicaSets (the next-generation ReplicationController).
 - Replica Controller is old way to manage the desired state of the pod.
@@ -33,14 +51,14 @@ kubectl create -f replicaController.yml
 kubectl create -f deploy.yml --validate=false
 ```
 
-##Rolling out updates with deployment 
+### Rolling out updates with deployment 
 
 ```
 kubectl apply -f deploy.yml --record
 ```
 
-# Service
-## Service gets single IP,DNS,Port in kubernetes that never changes, supporting pods to a service keeps changing (goes-down and comes-up with new ip).
+## Service
+### Service gets single IP,DNS,Port in kubernetes that never changes, supporting pods to a service keeps changing (goes-down and comes-up with new ip).
 
 - A Kubernetes Service is an abstraction which defines a logical set of Pods and a policy by which to access them from outside world.
 - Let say there is a pod running your web application, to expose this web application you need services.
@@ -51,7 +69,7 @@ kubectl apply -f deploy.yml --record
 kubectl expose  deployment/hello-world --name=hello-world --target-port=80 --type=NodePort
 ```
 
-## Declarative way
+### Declarative way
 
 ```
 kubectl create -f Service.yml
@@ -61,7 +79,7 @@ kubectl create -f Service.yml
 kubectl describe service static-site-svc
 
 
-# Summary 
+## Summary 
 
 - Pods are the basic unit which actually have your application up and running.
 - Deployments are more about updating the app and managing the app (like : how many replica you want and what Pod with label to choose for running the application)
@@ -69,7 +87,7 @@ kubectl describe service static-site-svc
 
 
 
-# Getting Started 
+# Getting Started With Examples
 
 ## SetUp
 - To Start with Kubernests follow the following instruction
