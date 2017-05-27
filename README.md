@@ -2,6 +2,8 @@ Table of contents
 =================
 
   * [Kubernetes Concepts](#Kubernetes-Concepts)
+  	* [Master](#master)
+  	* [Node](#node)
   	* [Pod](#Pod)
   	* [Replica Controller](#replica-controller)
   	* [Deployment](#deployment)
@@ -20,6 +22,7 @@ Table of contents
 	* kube-apiserver.
 	* kube-controller-manager
 	* kube-scheduler.
+
 
 
 ## Node
