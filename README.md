@@ -32,7 +32,7 @@ kubectl apply -f deploy.yml --record
 ```
 
 # Service
-##Service gets single IP,DNS,Port in kubernetes that never changes, supporting pods to a service keeps changing (goes-down and comes-up with new ip).
+## Service gets single IP,DNS,Port in kubernetes that never changes, supporting pods to a service keeps changing (goes-down and comes-up with new ip).
 
 ```
 kubectl expose  deployment/hello-world --name=hello-world --target-port=80 --type=NodePort
