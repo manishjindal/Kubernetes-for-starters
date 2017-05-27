@@ -4,14 +4,13 @@ Table of contents
   * [Kubernetes Concepts](#Kubernetes-Concepts)
   	* [Pod](#Pod)
   	* [Replica Controller](#replica-controller)
-  	* [Deployment](#Deployment)
-    * [Service](#Service)
+  	* [Deployment](#deployment)
+    * [Service](#service)
     * [Summary](#summary)
-  * [Getting Started with Examples](#Getting Started)
-    * [Multiple files](## Deploy first static website inside minikube)
-    * [Combo](#combo)
-  	* [Tests](#tests)
-  	* [Dependency](#dependency)
+  * [Getting Started with Examples](#getting-started-with-examples)
+    * [SetUp](#setup)
+    * [Deploy first static website inside minikube](#deploy-first-static-website-inside-minikube)
+  	* [Expose your application to outside world](#expose-your-application-to-outside-world)
 
 # Kubernetes Concepts
 
