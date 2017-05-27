@@ -1,4 +1,4 @@
-# Replica Controller
+# Service
 
 
 - Sample Service.yml file
@@ -7,18 +7,19 @@
 apiVersion: v1
 Kind: Service
 metadata:
-    name: static-site-svc     # Service name
+    name: static-site-svc             # Service name
     labels:
         app: static-site-svc-label    # Service label
 spec:
-    type: NodePort            # Load Balancer, it can be your own load balancer
+    type: NodePort                    # Load Balancer, it can be your own load balancer
     ports:
-    - ports: 80               # Exposed container port inside the pod
-      nodePort: 30001         # Exposed port to the outside world.
-      protocol: TCP           # this will be TCP always 
+    - ports: 80                       # Exposed container port inside the pod
+      nodePort: 30001                 # Exposed port to the outside world.
+      protocol: TCP                   # this will be TCP always 
     selector:
-      app: static-site-pod    # All Pods which matches this name will be part of this service, if number of pods increases the service will \
-                              # Will select all those node which matches the label and will perform the load balancing 
+      app: static-site-pod            # All Pods which matches this name will be part of this service, 
+                                      # if number of pods increases the service will
+                                      # Select all those node which matches the label and will perform the load balancing 
 
 ```
 
