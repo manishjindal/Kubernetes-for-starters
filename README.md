@@ -22,7 +22,7 @@ Table of contents
 - Example: if you have static web-app running inside a container in docker environment, in k8s that single container will run inside Pod.
 - Let's take a case where your application is made of multiple container ( client, server ) client in one container and server in different container than these two container can run inside your Pod and can communicate with each other.
 
-<img src="https://github.com/manishjindal/Kubernetes/images/multi-continer-pod.png" width="100">
+<img src="https://github.com/manishjindal/Kubernetes/blob/master/images/multi-continer-pod.png" width="100">
 
 ```
 kubectl create -f pod.yml
