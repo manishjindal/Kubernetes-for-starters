@@ -1,4 +1,4 @@
-Table of contents
+Topics
 =================
 
   * [Kubernetes Concepts](#Kubernetes-Concepts)
@@ -14,7 +14,8 @@ Table of contents
     * [Imperative vs Declarative Approach](#imperative-vs-declarative-approach)
     * [Deploy first static website inside minikube](#deploy-first-static-website-inside-minikube)
   	* [Expose your application to outside world](#expose-your-application-to-outside-world)
-  	
+    * [Update Your App](#update-your-app)	
+
 # Kubernetes Concepts
 
 ## Master
@@ -244,7 +245,7 @@ minikube service static-site --url
 
 - Scale App 
   - Scale app to two replicas now application will be served from two Pods
-  
+
 ```
 ./kubectl.exe scale deployment static-site --replicas 2
 ```
