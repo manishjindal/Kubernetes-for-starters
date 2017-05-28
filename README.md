@@ -232,5 +232,20 @@ Alternatively you can use following command to check the URL
 minikube service static-site --url
 ```
 
+## Update Your App
 
+
+- Update Image 
+  - You can update the image make sure it should be a valid image and tag name should be correct
+
+```
+./kubectl set image deployments/static-site static-site=seqvence/static-site:latest
+```
+
+- Scale App 
+  - Scale app to two replicas now application will be served from two Pods
+  
+```
+./kubectl.exe scale deployment static-site --replicas 2
+```
 
