@@ -16,23 +16,23 @@
 * Create Deployment using yaml/json file
 
     * '''
-apiVersion: apps/v1beta1
-kind: Deployment
-metadata: 
-  name: static-site-pod         # Name of the Deployment - unique name
-spec:
-  replica: 1
-  template:
-    metadata:
-      labels:
-        apps: static-site-pod   # This will search for pod with the label hello-world-1 (if already exist it will use otherwise will create from below docker image)
-    spec:
-      containers:
-      - name: hello         # Name of the container (name doesn't matter)
-        image: docker.io/seqvence/static-site:latest
-        ports:
-          - containerPort: 80 # Port exposed by conatiner
-'''
+     apiVersion: apps/v1beta1
+     kind: Deployment
+     metadata: 
+       name: static-site-pod         # Name of the Deployment - unique name
+     spec:
+       replica: 1
+       template:
+         metadata:
+           labels:
+             apps: static-site-pod   # This will search for pod with the label hello-world-1 (if already exist it will use otherwise will create from below docker image)     
+         spec:    
+           containers:   
+           - name: hello         # Name of the container (name doesn't matter)   
+             image: docker.io/seqvence/static-site:latest    
+             ports:     
+               - containerPort: 80 # Port exposed by conatiner
+     '''
 
 * Create Service using ymal/json file
 
