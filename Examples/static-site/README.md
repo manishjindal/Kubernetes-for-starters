@@ -15,7 +15,9 @@
 
 * Create Deployment using yaml/json file
 
-** '''
+** 
+
+'''
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata: 
