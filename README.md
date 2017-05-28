@@ -11,10 +11,10 @@ Table of contents
     * [Summary](#summary)
   * [Getting Started with Examples](#getting-started-with-examples)
     * [SetUp](#setup)
+    * [Imperative vs Declarative Approach](#imperative-vs-declarative-approach)
     * [Deploy first static website inside minikube](#deploy-first-static-website-inside-minikube)
   	* [Expose your application to outside world](#expose-your-application-to-outside-world)
-  	* [Imperative vs Declarative Approach](#imperative-vs-declarative-approach)
-
+  	
 # Kubernetes Concepts
 
 ## Master
