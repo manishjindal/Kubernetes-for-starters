@@ -4,20 +4,18 @@
 
 * Create Deployment `kubectl.exe run static-site --image=docker.io/seqvence/static-site:latest --port=80`
 
-* * This will create one deployment and one pod associated with the deployment.
+    * This will create one deployment and one pod associated with the deployment.
 
 * Expose this to outside world 
-* * Create service from the deployment `kubectl expose deployment/static-site --type="NodePort" --port 80`
+    * Create service from the deployment `kubectl expose deployment/static-site --type="NodePort" --port 80`
 
 * Access the service from your browser `minikube service static-site --url`
 
 ## Declarative Approach
 
-. Create Deployment using yaml/json file
+* Create Deployment using yaml/json file
 
-.. 
-
-'''
+    * '''
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata: 
@@ -36,11 +34,9 @@ spec:
           - containerPort: 80 # Port exposed by conatiner
 '''
 
-. Create Service using ymal/json file
+* Create Service using ymal/json file
 
-..
- 
-```
+    * ```
 apiVersion: v1
 Kind: Service
 metadata:
