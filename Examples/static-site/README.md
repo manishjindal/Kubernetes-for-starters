@@ -15,7 +15,7 @@
 
 * Create Deployment using yaml/json file
 
-'''
+```
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata: 
@@ -32,7 +32,7 @@ spec:
         image: docker.io/seqvence/static-site:latest
         ports:
           - containerPort: 80 # Port exposed by conatiner
-'''
+```
 
 * Create Service using ymal/json file
 
