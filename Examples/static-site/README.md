@@ -13,7 +13,7 @@
 
 ## Declarative Approach
 
-* Create Deployment using yaml/json file
+### Create Deployment using yaml/json file
 
 ```
 apiVersion: apps/v1beta1
@@ -34,7 +34,13 @@ spec:
           - containerPort: 80 # Port exposed by conatiner
 ```
 
-* Create Service using ymal/json file
+* Save the above file as deployment.yml and run following command to create deployment
+
+```
+kubectl create -f deployment.yml
+```
+
+### Create Service using ymal/json file
 
 ```
 apiVersion: v1
@@ -54,4 +60,10 @@ spec:
                                       # if number of pods increases the service will
                                       # Select all those node which matches the label and will perform the load balancing 
 
+```
+
+* Save the above file as service.yml and run the following command to create service
+
+```
+kubectl create -f service.yml
 ```
