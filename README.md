@@ -36,7 +36,7 @@ Each node has a Kubelet, which is an agent for managing the node and communicati
 	* kubelet : which communicates with the master.
 	* kube-proxy : a network proxy which reflects kubernetes networking service on each node.
 
-<img src="https://github.com/manishjindal/Kubernetes/blob/master/images/node-pod-container.png" width="500">
+<img src="https://github.com/manishjindal/Kubernetes/blob/master/images/node-pod-container.png" width="800">
 
 ## Pod
 - A Pod is the basic building block of Kubernetes–the smallest and simplest unit in the Kubernetes object model that you create or deploy.
