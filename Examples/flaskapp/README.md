@@ -1,66 +1,94 @@
-# Deployment
+# MyFlaskApp
 
-## Imperative way
+This will show the pod id where the app is running.
+First we will deploy the flask app version 1.0 which doesn't show the pod id than we will update the flaskapp image.
 
+## Create Deployment 
 
-- Create Deployment 
+### CLI
+```
+kubectl.exe run <deployment-name> --image=docker.io/mjindal/myflaskapp:1.0 --port=5000
+
+Example:
+kubectl.exe run myflaskapp --image=docker.io/mjindal/myflaskapp:1.0 --port=5000
 
 ```
-kubectl.exe run <deployment-name> --image=docker.io/mjindal/myflaskapp-forminikube:latest --port=5000
-```
 
-- Update Deployment
+### Declarative Way 
 
-```
-kubectl set image deployments/<deployment-name> <deployment-name>=mjindal/myflaskapp:latest
-```
-
-- Delete Deployment
-
-```
-./kubectl delete deployment <deployment-name>
-```
-
-
-## Declarative way
-
-- Sample Deployment File
+* First Create yaml file (myflaskapp.yml)
 
 ```
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata: 
-  name: static-site-pod 		# Name of the Deployment - unique name
+  name: static-site-pod     # Name of the Deployment - unique name
 spec:
   replica: 1
   template:
     metadata:
       labels:
-        apps: static-site-pod   # This will search for pod with the label hello-world-1 (if already exist it will use otherwise will create from below docker image)
+        apps: myflaskapp   # This will search for pod with the label hello-world-1 (if already exist it will use otherwise will create from below docker image)
     spec:
       containers:
-      - name: hello   			# Name of the container (name doesn't matter)
-        image: docker.io/seqvence/static-site:latest
+      - name: hello         # Name of the container (name doesn't matter)
+        image: docker.io/mjindal/myflaskapp:1.0
         ports:
-          - containerPort: 80	# Port exposed by conatiner
+          - containerPort: 5000 # Port exposed by conatiner
 ```
 
-
-- Create Deployment 
+* now create deployment using myflaskapp.yml
 
 ```
 kubectl.exe create -f <deployment-yaml/json-file> --validate=false
+
+Example:
+
+kubectl.exe create -f myflaskapp.yml --validate=false
 ```
 
-- Update Deployment
+## Update Deployment
+
+
+### CLI
+
+```
+kubectl set image deployments/<deployment-name> <deployment-name>=mjindal/myflaskapp:latest
+
+Example:
+
+kubectl set image deployments/myflaskapp myflaskapp=mjindal/myflaskapp:latest
+
+
+### Declarative 
+
+* update myflaskapp.yml file image to point mjindal/myflaskapp:latest
+
+```
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata: 
+  name: static-site-pod     # Name of the Deployment - unique name
+spec:
+  replica: 1
+  template:
+    metadata:
+      labels:
+        apps: myflaskapp   # This will search for pod with the label hello-world-1 (if already exist it will use otherwise will create from below docker image)
+    spec:
+      containers:
+      - name: hello         # Name of the container (name doesn't matter)
+        image: docker.io/mjindal/myflaskapp:latest
+        ports:
+          - containerPort: 5000 # Port exposed by conatiner
+```
+
+* Run following command to update apply updates.
 
 ```
 kubectl apply -f <updated-deployment-json/yaml-file> --record
-```
 
+Example:
 
-- Delete Deployment
-
-```
-./kubectl delete deployment <deployment-name>
+kubectl apply -f myflaskapp.yml --record
 ```
