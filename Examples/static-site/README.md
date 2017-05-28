@@ -40,7 +40,7 @@ spec:
 kubectl create -f deployment.yml
 ```
 
-### Create Service using ymal/json file
+### Create Service using yaml/json file
 
 ```
 apiVersion: v1
