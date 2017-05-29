@@ -250,3 +250,4 @@ minikube service static-site --url
 ./kubectl.exe scale deployment static-site --replicas 2
 ```
 
+
