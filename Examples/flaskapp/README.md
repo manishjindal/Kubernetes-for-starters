@@ -117,7 +117,7 @@ spec:
           - containerPort: 5000 # Port exposed by conatiner
 ```
 
-* Run following command to update apply updates.
+* Run following command to apply updates.
 
 ```
 kubectl apply -f <updated-deployment-json/yaml-file> --record
