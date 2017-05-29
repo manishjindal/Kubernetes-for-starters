@@ -47,6 +47,40 @@ Example:
 kubectl.exe create -f myflaskapp.yml --validate=false
 ```
 
+## Expose your application to outside world
+
+- To expose this application to outside world you need to create service.
+
+- Create service
+
+```
+kubectl expose deployment/myflaskapp --type="NodePort" --port 5000
+
+output:
+service "static-site" exposed
+```
+
+- Check your service
+
+```
+kubectl.exe get service
+
+output:
+
+NAME                     CLUSTER-IP   EXTERNAL-IP   PORT(S)             AGE
+myflaskapp               10.0.0.31    <nodes>       85000:30634/TCP     5s
+```
+- Access your service from browser
+
+From the get service you can see the expose port here is 30634, it can be anything, it is generated dynamically.
+We can also explicitly tell on which Port we want to expose.
+Now you should be able to acces the service from your <ip:exposed-port>
+Alternatively you can use following command to check the URL 
+
+```
+minikube service static-site --url
+```
+
 ## Update Deployment
 
 
