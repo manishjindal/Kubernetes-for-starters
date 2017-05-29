@@ -92,7 +92,7 @@ kubectl set image deployments/<deployment-name> <deployment-name>=mjindal/myflas
 Example:
 
 kubectl set image deployments/myflaskapp myflaskapp=mjindal/myflaskapp:latest
-
+```
 
 ### Declarative 
 
